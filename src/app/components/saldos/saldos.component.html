@@ -1,51 +1,39 @@
 <div class="row balance-container">
+
   <div class="col-sm">
-
     <div class="row h-100">
+      <app-saldo-card
+        [title]="cardOne.title"
+        [subTitle]="cardOne.subTitle"
+        [cardValue]="cardOne.cardValue"
+        [menuActions]="cardOne.menuActions">
+      </app-saldo-card>
 
-      <div class="col-sm-12 balance-box">
-        <div class="balance-card-header">
-          <div>
-            <p>Saldo Atual</p>
-            <small>Limite de R$: 500.000</small>
-          </div>
-
-          <i class="bi bi-three-dots-vertical" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Editar Limite</a></li>
-            <li><a class="dropdown-item" href="#">Detalhes</a></li>
-          </ul>
-        </div>
-
-        <p class="balance-value">R$: 1.340.247,34</p>
-
-        <i class="bi bi-check-circle card-warning-icon"></i>
-      </div>
-
-      <div class="col-sm-12 balance-box">
-        <div class="balance-card-header">
-          <div>
-            <p>Aporte / Saque</p>
-            <small class="negative-balance-text">Saldo negativo, aportar saldo</small>
-          </div>
-
-          <i class="bi bi-three-dots-vertical" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Aportar</a></li>
-            <li><a class="dropdown-item" href="#">Sacar</a></li>
-          </ul>
-        </div>
-
-        <p class="balance-value negative-value">R$: -500.000.00</p>
-
-        <i class="bi bi-exclamation-circle card-warning-icon negative-icon"></i>
-      </div>
-
+      <app-saldo-card
+        [title]="cardTwo.title"
+        [subTitle]="cardTwo.subTitle"
+        [cardValue]="cardTwo.cardValue"
+        [menuActions]="cardTwo.menuActions">
+      </app-saldo-card>
     </div>
-
   </div>
 
   <div class="col-sm balance-withdraw-box">
-    <p>3</p>
+    <div class="row">
+
+      <div class="col-sm-12">
+        <p>Title</p>
+      </div>
+
+      <div class="col-sm-12">
+        <p>Prices</p>
+      </div>
+
+      <div class="col-sm-12 wave-container p-0">
+        <p>Wave</p>
+      </div>
+
+    </div>
   </div>
+
 </div>
