@@ -24,3 +24,15 @@
     }
   }
 }
+
+.table-and-tickets-container {
+  margin-top: 1rem;
+
+  & .table-and-tickets-box {
+    box-shadow: $card-box-shadow;
+    background-color: #fff;
+    min-height: 300px;
+    border-radius: 10px;
+    padding: 1rem;
+  }
+}
