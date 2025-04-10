@@ -1,0 +1,93 @@
+@use 'custom-theme' as *;
+
+.balance-container {
+  height: auto;
+  min-height: 25rem;
+}
+
+.balance-box, .balance-withdraw-box {
+  box-shadow: $card-box-shadow;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  padding: 1rem;
+}
+
+.balance-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+
+  & .balance-value, .negative-value {
+    color: $primary-one;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  & .negative-value {
+    color: $primary-danger;
+  }
+
+  & .card-warning-icon {
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    transform: translateY(-12%);
+    pointer-events: none;
+    font-size: 6rem;
+    opacity: 0.6;
+    color: $primary-success;
+  }
+
+  & .negative-icon {
+    color: $primary-danger;
+  }
+}
+
+.balance-withdraw-box {
+  margin-left: 1rem;
+}
+
+.balance-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & i {
+    font-size: 1rem;
+    color: $grey-one;
+    padding: 0.2rem 0.5rem;
+    transition: 0.4s ease-out;
+    cursor: pointer;
+  }
+
+  & i:hover {
+    color: $primary-one;
+    background-color: $primary-three;
+    transition: 0.4s ease-in;
+    border-radius: 50%;
+  }
+
+  & p {
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    color: $primary-dark;
+  }
+
+  & small {
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: $grey-one;
+  }
+
+  & .negative-balance-text {
+    color: $primary-danger;
+  }
+
+}

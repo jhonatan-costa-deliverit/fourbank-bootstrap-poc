@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
+import {SaldosComponent} from '../../components/saldos/saldos.component';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [],
+  imports: [
+    SaldosComponent
+  ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })
