@@ -35,4 +35,12 @@
     border-radius: 10px;
     padding: 1rem;
   }
+
+  & p {
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    color: $primary-dark;
+    margin-bottom: 1rem;
+  }
 }

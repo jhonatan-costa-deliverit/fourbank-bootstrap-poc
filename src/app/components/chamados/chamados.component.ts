@@ -8,7 +8,7 @@ import {NgForOf} from '@angular/common';
     NgForOf
   ],
   templateUrl: './chamados.component.html',
-  styleUrl: './chamados.component.scss'
+  styleUrls: ['./chamados.component.scss', '../../shared/scss/hover-effects.scss']
 })
 export class ChamadosComponent {
   chamados: ChamadoInterface[] = [
@@ -26,7 +26,7 @@ export class ChamadosComponent {
       descricao: 'Estou com problemas para ligar meu computador.',
       data: '9/04/2025',
       hora: '9:35',
-      foto: 'https://angular-material.fusetheme.com/images/avatars/male-04.jpg'
+      foto: 'https://angular-material.fusetheme.com/images/avatars/female-01.jpg'
     },
     {
       id: '3',
@@ -34,7 +34,7 @@ export class ChamadosComponent {
       descricao: 'Estou com problemas para ligar meu computador.',
       data: '7/04/2025',
       hora: '9:35',
-      foto: 'https://angular-material.fusetheme.com/images/avatars/male-04.jpg'
+      foto: 'https://angular-material.fusetheme.com/images/avatars/male-02.jpg'
     },
     {
       id: '1',
