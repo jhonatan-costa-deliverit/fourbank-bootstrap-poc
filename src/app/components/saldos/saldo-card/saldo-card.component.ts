@@ -1,27 +1,18 @@
 import {Component, Input} from '@angular/core';
 import {CurrencyPipe, NgClass, NgForOf, NgIf} from '@angular/common';
 import {Router} from '@angular/router';
-
-export interface CardMenuInterface {
-  redirectLink: string,
-  linkText: string,
-}
+import {BalanceCardMenuInterface} from '../../../interfaces/saldos/balance-card-menu.interface';
 
 @Component({
   selector: 'app-saldo-card',
-  imports: [
-    NgIf,
-    NgForOf,
-    NgClass,
-    CurrencyPipe
-  ],
+  imports: [NgIf, NgForOf, NgClass, CurrencyPipe],
   templateUrl: './saldo-card.component.html',
   styleUrl: './saldo-card.component.scss'
 })
 export class SaldoCardComponent {
   @Input({required: true}) title: string = 'Saldo';
   @Input({required: true}) subTitle: string = 'Limite';
-  @Input({required: true}) menuActions: CardMenuInterface[] = [];
+  @Input({required: true}) menuActions: BalanceCardMenuInterface[] = [];
   @Input({required: true}) cardValue: number = 0;
 
   constructor(private router: Router) {}

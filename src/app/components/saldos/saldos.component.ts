@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
-import {CardMenuInterface, SaldoCardComponent} from './saldo-card/saldo-card.component';
-
-export interface ValuesInterface {
-  title: string;
-  subTitle: string;
-  menuActions: CardMenuInterface[];
-  cardValue: number;
-}
+import {SaldoCardComponent} from './saldo-card/saldo-card.component';
+import {BalanceValueInterface} from '../../interfaces/saldos/balance-value-interface';
 
 @Component({
   selector: 'app-saldos',
@@ -17,7 +11,7 @@ export interface ValuesInterface {
   styleUrl: './saldos.component.scss'
 })
 export class SaldosComponent {
-  cardOne: ValuesInterface = {
+  cardOne: BalanceValueInterface = {
     title: 'Saldo Atual',
     subTitle: 'Alerta de limite - R$: 500.000',
     menuActions: [
@@ -33,9 +27,9 @@ export class SaldosComponent {
     cardValue: 1340247.34
   };
 
-  cardTwo: ValuesInterface = {
+  cardTwo: BalanceValueInterface = {
     title: 'Aporte / Saque',
-    subTitle: 'Saldo negativo, aportar saldo',
+    subTitle: 'Saldo negativo, precisa aportar saldo.',
     menuActions: [
       {
         linkText: 'Aportar',
