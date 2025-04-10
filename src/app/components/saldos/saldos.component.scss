@@ -90,4 +90,16 @@
     color: $primary-danger;
   }
 
+  & .dropdown-menu li {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    transition: 0.4s ease-out;
+  }
+
+  & .dropdown-menu li:hover > a {
+    transition: 0.4s ease-in;
+    color: $primary-one;
+  }
+
 }
