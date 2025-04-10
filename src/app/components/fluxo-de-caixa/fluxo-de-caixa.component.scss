@@ -16,6 +16,32 @@
     font-size: 1rem;
     letter-spacing: 1px;
     color: $primary-dark;
+    margin-bottom: 1rem;
+  }
+
+}
+
+.donut-chart-labels-container {
+
+  & .donut-chart-label {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: $grey-one;
+    margin: 2rem 0 0 0;
+    padding: 0;
+  }
+
+  & .donut-chart-value {
+    color: $primary-one;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
+  }
+
+  & .label-send {
+    color: $primary-two;
   }
 
 }
