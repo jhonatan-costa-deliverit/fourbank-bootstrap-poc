@@ -1,4 +1,4 @@
-export interface BalanceCardMenuInterface {
+export interface SaldoCardMenuInterface {
   redirectLink: string,
   linkText: string,
 }

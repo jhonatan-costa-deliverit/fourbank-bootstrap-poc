@@ -1,7 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {CurrencyPipe, NgClass, NgForOf, NgIf} from '@angular/common';
 import {Router} from '@angular/router';
-import {BalanceCardMenuInterface} from '../../../interfaces/saldos/balance-card-menu.interface';
+import {SaldoCardMenuInterface} from '../../../interfaces/saldos/saldo-card-menu.interface';
 
 @Component({
   selector: 'app-saldo-card',
@@ -12,7 +12,7 @@ import {BalanceCardMenuInterface} from '../../../interfaces/saldos/balance-card-
 export class SaldoCardComponent {
   @Input({required: true}) title: string = 'Saldo';
   @Input({required: true}) subTitle: string = 'Limite';
-  @Input({required: true}) menuActions: BalanceCardMenuInterface[] = [];
+  @Input({required: true}) menuActions: SaldoCardMenuInterface[] = [];
   @Input({required: true}) cardValue: number = 0;
 
   constructor(private router: Router) {}
