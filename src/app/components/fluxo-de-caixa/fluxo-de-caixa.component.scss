@@ -1,0 +1,21 @@
+@use 'custom-theme' as *;
+
+.cash-flow-container {
+  margin-top: 1rem;
+}
+
+.cash-flow-box {
+  box-shadow: $card-box-shadow;
+  background-color: #fff;
+  min-height: 300px;
+  border-radius: 10px;
+  padding: 1rem;
+
+  & h1 {
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    color: $primary-dark;
+  }
+
+}
