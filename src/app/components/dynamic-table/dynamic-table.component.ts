@@ -1,36 +1,34 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {CurrencyPipe, NgClass, NgForOf, NgIf} from '@angular/common';
+import {UtilsService} from '../../services/utils.service';
 
 @Component({
   selector: 'app-dynamic-table',
-  imports: [
-    NgForOf,
-    CurrencyPipe,
-    NgClass,
-    NgIf
-  ],
+  imports: [NgForOf, CurrencyPipe, NgClass, NgIf],
   templateUrl: './dynamic-table.component.html',
   styleUrl: './dynamic-table.component.scss'
 })
 export class DynamicTableComponent implements OnInit {
-  @Input() tableData: any[] = [];
-
-  currentPage = 1;
-  pageSize = 5;
+  @Input({required: true}) tableData: any[] = [];
+  @Input({required: true}) columnsToDisplay: string[] = [];
+  currentPage: number = 1;
+  pageSize: number = 5;
   pagedData: any[] = [];
-
   sortColumn: string = '';
-  sortDirection: boolean = true; // true = asc, false = desc
+  sortDirection: boolean = true;
+  @Input() csvName: string = 'tabela-completa';
 
-  ngOnInit() {
+  constructor(protected utilService: UtilsService) {}
+
+  ngOnInit(): void {
     this.setPage(1);
   }
 
-  setPage(page: number) {
+  setPage(page: number): void {
     if (page < 1 || page > this.getTotalPages()) return;
     this.currentPage = page;
-    const start = (page - 1) * this.pageSize;
-    const end = start + this.pageSize;
+    const start: number = (page - 1) * this.pageSize;
+    const end: number = start + this.pageSize;
     this.pagedData = [...this.tableData.slice(start, end)];
   }
 
@@ -42,7 +40,7 @@ export class DynamicTableComponent implements OnInit {
     return Array.from({ length: this.getTotalPages() }, (_, i) => i + 1);
   }
 
-  sortData(column: string) {
+  sortData(column: string): void {
     if (this.sortColumn === column) {
       this.sortDirection = !this.sortDirection;
     } else {
@@ -50,9 +48,9 @@ export class DynamicTableComponent implements OnInit {
       this.sortDirection = true;
     }
 
-    this.tableData.sort((a, b) => {
-      let valA = a[column];
-      let valB = b[column];
+    this.tableData.sort((a: any, b: any): 0 | 1 | -1 => {
+      let valA: any = a[column];
+      let valB: any = b[column];
 
       if (column === 'data') {
         valA = new Date(valA);
@@ -76,30 +74,6 @@ export class DynamicTableComponent implements OnInit {
   getSortIcon(column: string): string {
     if (this.sortColumn !== column) return 'bi bi-arrow-down-up';
     return this.sortDirection ? 'bi bi-arrow-up' : 'bi bi-arrow-down';
-  }
-
-  exportToCSV() {
-    const headers = ['Data', 'Conta', 'Agência', 'Nome', 'Valor', 'Status'];
-    const rows = this.tableData.map(item => [
-      item.data,
-      item.conta,
-      item.agencia,
-      item.nome,
-      item.valor.toFixed(2).replace('.', ','), // vírgula no valor
-      item.status
-    ]);
-
-    const csvContent = [headers, ...rows]
-      .map(row => row.map(val => `"${val}"`).join(';'))
-      .join('\n');
-
-    const blob = new Blob(["\uFEFF" + csvContent], { type: 'text/csv;charset=utf-8;' });
-    const link = document.createElement('a');
-    link.href = URL.createObjectURL(blob);
-    link.setAttribute('download', 'tabela-completa.csv');
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
   }
 
 }

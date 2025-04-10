@@ -25,5 +25,6 @@ export class DashboardComponent {
     { data: '2025-03-28', conta: '11112222', agencia: '9999', nome: 'Fábio Teixeira', valor: 275.90, status: 'Analisar' },
     { data: '2025-03-12', conta: '10101010', agencia: '0000', nome: 'Larissa Vieira', valor: 420.00, status: 'Negado' }
   ];
+  columnsToDisplay: string[] = ['data', 'conta', 'agencia', 'nome', 'valor', 'status'];
 
 }
