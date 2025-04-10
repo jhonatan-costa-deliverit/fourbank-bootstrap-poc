@@ -1,0 +1,41 @@
+@use 'custom-theme' as *;
+
+.navbar {
+  padding: 0.5rem 2rem;
+  box-shadow: -2px 3px 6px $primary-one;
+  margin-bottom: 0.5rem;
+
+  & #nav-profile-default-icon {
+    font-size: 2rem;
+    color: $grey-one;
+  }
+}
+
+.navbar-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & i {
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: $grey-one;
+    padding: 0 0.5rem;
+    transition: 0.4s ease-out;
+  }
+
+  & i:hover {
+    color: $primary-one;
+    background-color: $primary-three;
+    transition: 0.4s ease-in;
+    border-radius: 50%;
+  }
+
+  & span {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: $grey-one;
+  }
+}
+
