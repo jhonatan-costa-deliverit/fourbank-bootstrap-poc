@@ -4,14 +4,14 @@
     <div class="balance-card-header">
       <div>
         <p>{{ title }}</p>
-        <small>{{ subTitle }}</small>
+        <small [ngClass]="{'negative-balance-text': cardValue < 0}">{{ subTitle }}</small>
       </div>
       <i *ngIf="menuActions && menuActions.length > 0" class="bi bi-three-dots-vertical" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
       <ul *ngIf="menuActions && menuActions.length > 0" class="dropdown-menu">
         <li *ngFor="let action of menuActions"><a class="dropdown-item" (click)="redirectToUrl(action.redirectLink)">{{ action.linkText }}</a></li>
       </ul>
     </div>
-    <p class="balance-value">R$: {{ cardValue | currency:'BRL':'symbol':'1.2-2' }}</p>
+    <p class="balance-value" [ngClass]="{'negative-value': cardValue < 0}">R$: {{ cardValue | currency:'BRL':'symbol':'1.2-2' }}</p>
     <i class="card-warning-icon" [ngClass]="{'bi bi-check-circle': cardValue > 0, 'bi bi-exclamation-circle negative-icon': cardValue < 0}"></i>
   </div>
 </div>
