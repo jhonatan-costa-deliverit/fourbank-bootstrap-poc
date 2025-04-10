@@ -71,3 +71,19 @@
 .wave__shape {
   fill: $primary-two;
 }
+
+@media only screen and (max-width: 575px) {
+
+  .balance-withdraw-box {
+    margin: 1.2rem 0 0 0;
+  }
+
+  .wave svg {
+    height: 100px;
+  }
+
+  .balance-withdraw-value {
+    margin-top: 1.5rem;
+  }
+
+}

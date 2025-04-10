@@ -92,3 +92,18 @@
   }
 
 }
+
+@media only screen and (max-width: 575px) {
+  .balance-box {
+
+    & .balance-value {
+      margin-top: 1.5rem;
+    }
+
+    & .card-warning-icon {
+      transform: translateY(10%);
+      font-size: 4rem;
+    }
+
+  }
+}
