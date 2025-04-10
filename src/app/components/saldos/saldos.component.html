@@ -22,27 +22,33 @@
   <div class="col-sm balance-withdraw-box">
     <div class="row">
 
-      <div class="col-sm-12">
+      <div class="col-sm-12 balance-withdraw-container">
         <div class="row">
 
-          <div class="col-sm-12">
-            <p>title</p>
-            <p>Sub title</p>
+          <div class="col-sm-12 balance-withdraw-header">
+            <h1>Saldos</h1>
+            <h2>Veja e analise o seu saldo inicial e seu saldo atual da conta corrente.</h2>
           </div>
 
           <div class="col-sm-6">
-            <p>1</p>
+            <p class="balance-withdraw-value">R$ {{ 900667.79 | currency:'BRL':'symbol':'1.2-2' }}</p>
+            <p class="balance-withdraw-text">Saldo Conta Corrente</p>
           </div>
 
           <div class="col-sm-6">
-            <p>2</p>
+            <p class="balance-withdraw-value">R$ {{ 2145092.30 | currency:'BRL':'symbol':'1.2-2' }}</p>
+            <p class="balance-withdraw-text">Saldo Inicial</p>
           </div>
 
         </div>
       </div>
 
       <div class="col-sm-12 p-0">
-        <p>Wave</p>
+        <div class="wave">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="wave__shape"></path>
+          </svg>
+        </div>
       </div>
 
     </div>

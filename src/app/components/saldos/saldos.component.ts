@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import {SaldoCardComponent} from './saldo-card/saldo-card.component';
 import {BalanceValueInterface} from '../../interfaces/saldos/balance-value-interface';
+import {CurrencyPipe} from "@angular/common";
 
 @Component({
   selector: 'app-saldos',
-  imports: [
-    SaldoCardComponent
-  ],
+    imports: [
+        SaldoCardComponent,
+        CurrencyPipe
+    ],
   templateUrl: './saldos.component.html',
   styleUrl: './saldos.component.scss'
 })

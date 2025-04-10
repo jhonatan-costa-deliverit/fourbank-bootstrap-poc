@@ -11,3 +11,63 @@
   border-radius: 0.5rem;
   background-color: #fff;
 }
+
+.balance-withdraw-container {
+  padding: 1rem;
+}
+
+.balance-withdraw-header {
+
+  margin-bottom: 3rem;
+
+  & h1 {
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    color: $primary-dark;
+  }
+
+  & h2 {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+    color: $grey-one;
+  }
+
+}
+
+.balance-withdraw-value {
+  color: $primary-one;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 0;
+}
+
+.balance-withdraw-text {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: $grey-one;
+}
+
+.wave {
+  width: 100%;
+  min-height: 185px;
+  border-radius: 10px;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.wave svg {
+  position: relative;
+  display: block;
+  width: calc(136% + 1.3px);
+  height: 180px;
+  transform: rotateY(180deg);
+}
+
+.wave__shape {
+  fill: $primary-two;
+}
