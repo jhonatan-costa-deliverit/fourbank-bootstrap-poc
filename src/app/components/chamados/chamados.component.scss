@@ -1,0 +1,16 @@
+@use 'custom-theme' as *;
+
+.chamados-container {
+  border-top: 1px solid $primary-one;
+  padding-top: 1rem;
+  overflow-y: scroll;
+  height: 350px;
+
+  & img {
+    height: auto;
+    width: 100%;
+    max-width: 50px;
+    border-radius: 50%;
+    border: 2px solid $primary-one;
+  }
+}
