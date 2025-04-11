@@ -1,0 +1,43 @@
+@use 'custom-theme' as *;
+
+.menu-items-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  & a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: $grey-one;
+    padding: 0.5rem;
+    transition: 0.4s ease-out;
+    cursor: pointer;
+  }
+
+  & a:hover {
+    background-color: $primary-three;
+    border-radius: 10px;
+    transition: 0.4s ease-in;
+    color: $primary-one;
+  }
+
+  & a:hover > i {
+    color: #fff;
+    transition: 0.4s ease-in;
+  }
+
+  & i {
+    color: $primary-one;
+    font-size: 1.2rem;
+    padding-right: 0.5rem;
+    transition: 0.4s ease-out;
+  }
+
+  & .logout-item:hover, .logout-item:hover > i {
+    color: $primary-danger;
+  }
+}

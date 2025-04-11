@@ -34,3 +34,55 @@
   }
 }
 
+#MainOffcanvasMenu {
+  padding: 1rem;
+
+  & .offcanvas-header {
+    & button {
+      transition: 0.4s ease-out;
+    }
+
+    & button:hover {
+      background-color: $primary-three;
+      padding: 0.5rem;
+      border-radius: 50%;
+      transition: 0.4s ease-in;
+    }
+  }
+
+  .offcanvas-body {
+    .canvas-container {
+      height: 100%;
+    }
+
+    .profile-info-container {
+      text-align: center;
+
+      & img {
+        max-width: 100px;
+        border-radius: 50%;
+        border: 2px solid $primary-one;
+      }
+
+      & p {
+        font-size: 1rem;
+        letter-spacing: 1px;
+        font-weight: 500;
+        color: $primary-one;
+        margin: 0;
+      }
+
+      & span {
+        color: $primary-dark;
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+
+      & .menu-items-container {
+        padding-top: 1rem;
+      }
+    }
+  }
+
+}
+

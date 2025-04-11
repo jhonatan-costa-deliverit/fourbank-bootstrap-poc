@@ -1,0 +1,71 @@
+<ul class="menu-items-list">
+  <li>
+    <a class="nav-link hvr-float" [routerLink]="['/dashboard']" routerLinkActive="active-link">
+      <i class="bi bi-house"></i>
+      <span>DASHBOARD</span>
+    </a>
+  </li>
+
+  <li>
+    <a class="nav-link hvr-float" [routerLink]="['/consultas']" routerLinkActive="active-link">
+      <i class="bi bi-search"></i>
+      <span>CONSULTAS</span>
+    </a>
+  </li>
+
+  <li>
+    <a class="nav-link hvr-float" [routerLink]="['/conciliacao']" routerLinkActive="active-link">
+      <i class="bi bi-people"></i>
+      <span>CONCILIAÇÃO</span>
+    </a>
+  </li>
+
+  <li>
+    <a class="nav-link hvr-float" [routerLink]="['/reivindicacoes']" routerLinkActive="active-link">
+      <i class="bi bi-megaphone-fill"></i>
+      <span>REIVINDICAÇÕES</span>
+    </a>
+  </li>
+  <li>
+    <a class="nav-link hvr-float" [routerLink]="['/relato-de-infracao']" routerLinkActive="active-link">
+      <i class="bi bi-exclamation-triangle-fill"></i>
+      <span>RELATO DE INFRAÇÃO</span>
+    </a>
+  </li>
+  <li>
+    <a class="nav-link hvr-float" [routerLink]="['/devolucao-especial']" routerLinkActive="active-link">
+      <i class="bi bi-box-seam"></i>
+      <span>DEVOLUÇÃO ESPECIAL</span>
+    </a>
+  </li>
+  <li>
+    <a class="nav-link hvr-float" [routerLink]="['/contigencia']" routerLinkActive="active-link">
+      <i class="bi bi-slash-circle"></i>
+      <span>CONTINGÊNCIA</span>
+    </a>
+  </li>
+  <li>
+    <a class="nav-link hvr-float" [routerLink]="['/relatorios']" routerLinkActive="active-link">
+      <i class="bi bi-graph-up"></i>
+      <span>RELATÓRIOS</span>
+    </a>
+  </li>
+  <li>
+    <a class="nav-link hvr-float" [routerLink]="['/chamados']" routerLinkActive="active-link">
+      <i class="bi bi-chat-left-dots-fill"></i>
+      <span>CHAMADOS</span>
+    </a>
+  </li>
+  <li>
+    <a class="nav-link hvr-float" [routerLink]="['/configuracoes']" routerLinkActive="active-link">
+      <i class="bi bi-gear-fill"></i>
+      <span>CONFIGURAÇÕES</span>
+    </a>
+  </li>
+  <li>
+    <a class="nav-link hvr-backward logout-item" (click)="logoutAction.emit()">
+      <i class="bi bi-arrow-left"></i>
+      <span>SAIR</span>
+    </a>
+  </li>
+</ul>

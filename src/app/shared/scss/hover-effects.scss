@@ -18,7 +18,7 @@
 }
 
 /* Forward / Backward */
-.hvr-forward {
+.hvr-forward, .hvr-backward {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
@@ -34,3 +34,9 @@
   -webkit-transform: translateX(5px);
   transform: translateX(5px);
 }
+
+.hvr-backward:hover, .hvr-backward:focus, .hvr-backward:active {
+  -webkit-transform: translateX(-5px);
+  transform: translateX(-5px);
+}
+

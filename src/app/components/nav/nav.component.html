@@ -18,8 +18,18 @@
   </div>
 
   <div class="offcanvas-body">
-    <div>
-      Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+    <div class="row canvas-container">
+
+      <div class="col-sm profile-info-container">
+        <img src="https://angular-material.fusetheme.com/images/avatars/male-04.jpg" alt="profile-picture"/>
+        <p>Heverton Andrade</p>
+        <span>heverton.andrade&#64;deliverit.com.br</span>
+
+        <div class="menu-items-container">
+          <app-menu-items (logoutAction)="logout()"></app-menu-items>
+        </div>
+      </div>
+
     </div>
   </div>
 
