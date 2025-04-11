@@ -1,22 +1,22 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {CurrencyPipe, NgClass, NgForOf, NgIf} from '@angular/common';
+import {CurrencyPipe, NgClass, NgForOf, NgIf, NgStyle, NgSwitch, NgSwitchCase, NgSwitchDefault} from '@angular/common';
 import {UtilsService} from '../../services/utils.service';
 
 @Component({
   selector: 'app-dynamic-table',
-  imports: [NgForOf, CurrencyPipe, NgClass, NgIf],
+  imports: [NgForOf, CurrencyPipe, NgClass, NgIf, NgStyle, NgSwitch, NgSwitchCase, NgSwitchDefault],
   templateUrl: './dynamic-table.component.html',
-  styleUrl: './dynamic-table.component.scss'
+  styleUrls: ['./dynamic-table.component.scss', '../../shared/scss/hover-effects.scss']
 })
 export class DynamicTableComponent implements OnInit {
   @Input({required: true}) tableData: any[] = [];
   @Input({required: true}) columnsToDisplay: string[] = [];
+  @Input() csvName: string = 'tabela-completa';
   currentPage: number = 1;
   pageSize: number = 5;
   pagedData: any[] = [];
   sortColumn: string = '';
   sortDirection: boolean = true;
-  @Input() csvName: string = 'tabela-completa';
 
   constructor(protected utilService: UtilsService) {}
 
@@ -74,6 +74,25 @@ export class DynamicTableComponent implements OnInit {
   getSortIcon(column: string): string {
     if (this.sortColumn !== column) return 'bi bi-arrow-down-up';
     return this.sortDirection ? 'bi bi-arrow-up' : 'bi bi-arrow-down';
+  }
+
+  analyseData(data: any): void {
+    if (data && data.status && data.status.toLowerCase() === 'analisar') {
+      console.log('data', data);
+    }
+  }
+
+  getDataStatusColor(data: any): string {
+    switch (data?.status.toLowerCase()) {
+      case 'aprovado':
+        return '#a1d586';
+      case 'negado':
+        return '#d44242';
+      case 'analisar':
+        return '#001F2B';
+      default:
+        return '#001F2B';
+    }
   }
 
 }

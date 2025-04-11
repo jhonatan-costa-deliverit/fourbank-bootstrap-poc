@@ -28,6 +28,10 @@
 .table-and-tickets-container {
   margin-top: 1rem;
 
+  .chamados-box {
+    margin-right: 1rem;
+  }
+
   & .table-and-tickets-box {
     box-shadow: $card-box-shadow;
     background-color: #fff;
@@ -42,5 +46,13 @@
     letter-spacing: 1px;
     color: $primary-dark;
     margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .table-and-tickets-container {
+    & .table-and-tickets-box {
+      margin: 1rem 0;
+    }
   }
 }

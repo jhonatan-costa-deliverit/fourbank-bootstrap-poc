@@ -13,12 +13,12 @@
 
   <div class="row table-and-tickets-container">
 
-    <div class="col-sm-4 table-and-tickets-box">
+    <div class="col-sm-4 table-and-tickets-box chamados-box">
       <p>Chamados</p>
       <app-chamados></app-chamados>
     </div>
 
-    <div class="col-sm ms-3 table-and-tickets-box">
+    <div class="col-sm table-and-tickets-box">
       <p>Lançamentos Agendados</p>
       <app-dynamic-table [tableData]="tableData" [columnsToDisplay]="columnsToDisplay" [csvName]="'lançamentos-agendados'"></app-dynamic-table>
     </div>

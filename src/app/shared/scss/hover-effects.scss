@@ -9,14 +9,12 @@
   transition-property: transform;
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
-  margin: 0;
-  padding: 0;
   text-decoration: none;
 }
 
 .hvr-float:hover, .hvr-float:focus, .hvr-float:active {
-  -webkit-transform: translateY(-6px);
-  transform: translateY(-6px);
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 /* Forward / Backward */
@@ -33,6 +31,6 @@
 }
 
 .hvr-forward:hover, .hvr-forward:focus, .hvr-forward:active {
-  -webkit-transform: translateX(6px);
-  transform: translateX(6px);
+  -webkit-transform: translateX(5px);
+  transform: translateX(5px);
 }

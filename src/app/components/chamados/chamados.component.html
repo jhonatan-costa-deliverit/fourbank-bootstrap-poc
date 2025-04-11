@@ -1,7 +1,7 @@
 <div class="row chamados-container">
   <div class="col-sm-12 chamados-box">
 
-    <div *ngFor="let chamado of chamados" class="row d-flex justify-content-center align-items-center mb-4">
+    <div *ngFor="let chamado of chamados" class="row d-flex justify-content-center align-items-center mb-4 chamado-row">
 
       <div class="col-sm-2">
         <img id="nav-profile-picture" [src]="chamado?.foto ?? 'https://angular-material.fusetheme.com/images/avatars/male-04.jpg'" alt="profile-picture"/>
@@ -9,7 +9,7 @@
 
       <div class="col-sm-6">
         <p class="ticket-name">{{ chamado.nome }}</p>
-        <p class="ticket-description">{{ chamado.descricao }}</p>
+        <p class="ticket-description">{{ chamado.descricao  }}</p>
       </div>
 
       <div class="col-sm-2">
@@ -17,7 +17,7 @@
         <p class="ticket-date">{{ chamado.hora }}</p>
       </div>
 
-      <div class="col-sm me-1">
+      <div class="col-sm">
         <i class="bi bi-eye hvr-float"></i>
       </div>
 

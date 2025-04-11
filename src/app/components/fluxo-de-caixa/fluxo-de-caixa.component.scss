@@ -21,6 +21,10 @@
 
 }
 
+.bar-box {
+  margin-right: 1rem;
+}
+
 .donut-chart-labels-container {
 
   & .donut-chart-label {
@@ -43,4 +47,14 @@
     color: $primary-two;
   }
 
+}
+
+@media only screen and (max-width: 575px) {
+  .cash-flow-box {
+    text-align: center;
+  }
+
+  .bar-box {
+    margin: 1rem 0;
+  }
 }

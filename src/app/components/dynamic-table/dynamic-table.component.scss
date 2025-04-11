@@ -1,0 +1,121 @@
+@use 'custom-theme' as *;
+
+.table-container {
+  min-height: 350px;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.table {
+  width: 100%;
+
+  & th {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: $primary-one;
+    width: 15%;
+
+    & i {
+      cursor: pointer;
+      margin-left: 1rem;
+    }
+
+    & i:hover {
+      color: $primary-dark;
+    }
+  }
+
+  & td {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: $grey-one;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 1rem;
+  }
+}
+
+.analyse-btn {
+  background: $primary-one;
+  color: $primary-four;
+  padding: 0 15px 2px 15px;
+  border-radius: 3px;
+  transition: 0.4s ease-out ;
+}
+
+.analyse-btn:hover {
+  transition: 0.4s ease-in;
+  background: $primary-four;
+  color: $primary-one;
+}
+
+.table-footer-container {
+  margin-top: 1rem;
+}
+
+.footer-paginator-container {
+  & .pagination .page-link {
+    color: $primary-one;
+    background-color: transparent;
+    border: 1px solid #dee2e6;
+    cursor: pointer;
+    transition: 0.4s ease-out;
+  }
+
+  & .pagination .page-link:hover {
+    background-color: $primary-one;
+    color: #fff;
+    transition: 0.4s ease-in;
+  }
+
+  & .pagination .page-item.active .page-link {
+    background-color: $primary-one;
+    color: #fff;
+  }
+
+  & .pagination .page-item.disabled .page-link {
+    color: $primary-two;
+    background-color: $primary-three;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}
+
+.export-btn {
+  background: $primary-three ;
+  color: $primary-one;
+  transition: 0.4s ease-out;
+  border: none;
+}
+
+.export-btn:hover {
+  background: $primary-one;
+  color: $primary-three;
+  transition: 0.4s ease-in;
+}
+
+.export-btn-container {
+  text-align: end;
+}
+
+@media only screen and (max-width: 575px) {
+  .table {
+    min-width: 250%;
+  }
+
+  .table-footer-container {
+    & nav {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .export-btn-container {
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
