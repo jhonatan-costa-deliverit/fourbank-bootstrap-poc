@@ -2,27 +2,26 @@
 
   <div class="col-sm cash-flow-box bar-box">
     <h1>Fluxo de Caixa</h1>
-    <app-bar></app-bar>
+    <app-bar [barData]="fluxoCaixaBarData"></app-bar>
   </div>
 
   <div class="col-sm-4 cash-flow-box">
-
     <div class="row">
       <div class="col-sm-8">
         <h1>Pagamentos</h1>
-        <app-donut></app-donut>
+        <app-donut [donutData]="fluxoCaixaDonutData"></app-donut>
       </div>
 
       <div class="donut-chart-labels-container col-sm d-flex justify-content-center align-items-center">
         <div>
           <div>
             <p class="donut-chart-label">Recebido</p>
-            <p class="donut-chart-value"> <i class="bi bi-arrow-down"></i>R$ 2.511.189,24</p>
+            <p class="donut-chart-value"> <i class="bi bi-arrow-down"></i>R$ {{ fluxoCaixaDonutData.pagamentoRecebido | currency:'BRL':'symbol':'1.2-2' }}</p>
           </div>
 
           <div>
             <p class="donut-chart-label">Enviado</p>
-            <p class="donut-chart-value label-send"> <i class="bi bi-arrow-up"></i>R$ 2.816.034,20</p>
+            <p class="donut-chart-value label-send"> <i class="bi bi-arrow-up"></i>R$ {{ fluxoCaixaDonutData.pagamentoEnviado | currency:'BRL':'symbol':'1.2-2' }}</p>
           </div>
         </div>
       </div>

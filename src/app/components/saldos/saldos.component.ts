@@ -1,19 +1,17 @@
 import { Component } from '@angular/core';
 import {SaldoCardComponent} from './saldo-card/saldo-card.component';
-import {SaldoValueInterface} from '../../interfaces/saldos/saldo-value-interface';
+import {SaldoCardValueInterface} from '../../interfaces/saldos/saldo-card-value-interface';
 import {CurrencyPipe} from "@angular/common";
+import {SaldoContasInterface} from '../../interfaces/saldos/saldo-contas.interface';
 
 @Component({
   selector: 'app-saldos',
-    imports: [
-        SaldoCardComponent,
-        CurrencyPipe
-    ],
+  imports: [SaldoCardComponent, CurrencyPipe],
   templateUrl: './saldos.component.html',
   styleUrl: './saldos.component.scss'
 })
 export class SaldosComponent {
-  cardOne: SaldoValueInterface = {
+  cardOne: SaldoCardValueInterface = {
     title: 'Saldo Atual',
     subTitle: 'Alerta de limite - R$: 500.000',
     menuActions: [
@@ -28,8 +26,7 @@ export class SaldosComponent {
     ],
     cardValue: 1340247.34
   };
-
-  cardTwo: SaldoValueInterface = {
+  cardTwo: SaldoCardValueInterface = {
     title: 'Aporte / Saque',
     subTitle: 'Saldo negativo, precisa aportar saldo.',
     menuActions: [
@@ -44,5 +41,6 @@ export class SaldosComponent {
     ],
     cardValue: -500000.00
   }
+  saldoContas: SaldoContasInterface = {saldoContaCorrente: 900667.79, saldoInicial: 2145092.30};
 
 }

@@ -1,6 +1,6 @@
 import {SaldoCardMenuInterface} from './saldo-card-menu.interface';
 
-export interface SaldoValueInterface {
+export interface SaldoCardValueInterface {
   title: string;
   subTitle: string;
   menuActions: SaldoCardMenuInterface[];

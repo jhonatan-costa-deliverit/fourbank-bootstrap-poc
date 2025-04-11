@@ -1,3 +1,5 @@
-<div class="donut-chart-container">
+<app-simple-spinner *ngIf="showSpinner"></app-simple-spinner>
+
+<div *ngIf="!showSpinner" class="donut-chart-container">
   <canvas baseChart [data]="donutChartData" [options]="donutChartOptions" [type]="'doughnut'"></canvas>
 </div>

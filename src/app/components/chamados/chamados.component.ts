@@ -1,12 +1,10 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 import {ChamadoInterface} from '../../interfaces/chamados/chamado.interface';
 import {NgForOf} from '@angular/common';
 
 @Component({
   selector: 'app-chamados',
-  imports: [
-    NgForOf
-  ],
+  imports: [NgForOf],
   templateUrl: './chamados.component.html',
   styleUrls: ['./chamados.component.scss', '../../shared/scss/hover-effects.scss']
 })
@@ -61,5 +59,5 @@ export class ChamadosComponent {
       foto: 'https://angular-material.fusetheme.com/images/avatars/male-02.jpg'
     },
   ];
-
+  @Output() chamadoAction: EventEmitter<ChamadoInterface> = new EventEmitter();
 }

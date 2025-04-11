@@ -6,8 +6,7 @@ import {NgIf} from '@angular/common';
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, NavComponent, NgIf],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
   constructor(protected router: Router) {}

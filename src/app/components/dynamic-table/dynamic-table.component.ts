@@ -1,14 +1,16 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {CurrencyPipe, NgClass, NgForOf, NgIf, NgStyle, NgSwitch, NgSwitchCase, NgSwitchDefault} from '@angular/common';
 import {UtilsService} from '../../services/utils.service';
+import {StatusColorPipe} from '../../pipes/status-color.pipe';
 
 @Component({
   selector: 'app-dynamic-table',
-  imports: [NgForOf, CurrencyPipe, NgClass, NgIf, NgStyle, NgSwitch, NgSwitchCase, NgSwitchDefault],
+  imports: [NgForOf, CurrencyPipe, NgClass, NgIf, NgStyle, NgSwitch, NgSwitchCase, NgSwitchDefault, StatusColorPipe],
   templateUrl: './dynamic-table.component.html',
   styleUrls: ['./dynamic-table.component.scss', '../../shared/scss/hover-effects.scss']
 })
 export class DynamicTableComponent implements OnInit {
+  @Output() analyseStatus: EventEmitter<any> = new EventEmitter();
   @Input({required: true}) tableData: any[] = [];
   @Input({required: true}) columnsToDisplay: string[] = [];
   @Input() csvName: string = 'tabela-completa';
@@ -78,20 +80,7 @@ export class DynamicTableComponent implements OnInit {
 
   analyseData(data: any): void {
     if (data && data.status && data.status.toLowerCase() === 'analisar') {
-      console.log('data', data);
-    }
-  }
-
-  getDataStatusColor(data: any): string {
-    switch (data?.status.toLowerCase()) {
-      case 'aprovado':
-        return '#a1d586';
-      case 'negado':
-        return '#d44242';
-      case 'analisar':
-        return '#001F2B';
-      default:
-        return '#001F2B';
+      this.analyseStatus.emit(data);
     }
   }
 

@@ -15,7 +15,6 @@ export class UtilsService {
         return val;
       })
     );
-
     const csvContent: string = [tableColumns, ...rows].map((row: any[]): string => row.map((val: any): string => `"${val}"`).join(';')).join('\n');
     const blob = new Blob(["\uFEFF" + csvContent], { type: 'text/csv;charset=utf-8;' });
     const link: HTMLAnchorElement = document.createElement('a');

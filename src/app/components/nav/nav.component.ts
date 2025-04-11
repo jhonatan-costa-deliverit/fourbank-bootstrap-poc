@@ -13,4 +13,5 @@ export class NavComponent {
   logout(): void {
     console.log('logout');
   }
+
 }

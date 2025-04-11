@@ -1,3 +1,5 @@
-<div class="bar-chart-container">
+<app-simple-spinner *ngIf="showSpinner"></app-simple-spinner>
+
+<div *ngIf="!showSpinner" class="bar-chart-container" style="height: 100%; max-height: 300px;">
   <canvas baseChart [data]="barChartData" [options]="barChartOptions" [type]="'bar'"></canvas>
 </div>

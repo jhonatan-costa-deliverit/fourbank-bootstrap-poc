@@ -3,6 +3,7 @@ import {SaldosComponent} from '../../components/saldos/saldos.component';
 import {FluxoDeCaixaComponent} from '../../components/fluxo-de-caixa/fluxo-de-caixa.component';
 import {ChamadosComponent} from '../../components/chamados/chamados.component';
 import {DynamicTableComponent} from '../../components/dynamic-table/dynamic-table.component';
+import {ChamadoInterface} from '../../interfaces/chamados/chamado.interface';
 
 @Component({
   selector: 'app-dashboard',
@@ -26,5 +27,13 @@ export class DashboardComponent {
     { data: '2025-03-12', conta: '10101010', agencia: '0000', nome: 'Larissa Vieira', valor: 420.00, status: 'Negado' }
   ];
   columnsToDisplay: string[] = ['data', 'conta', 'agencia', 'nome', 'valor', 'status'];
+
+  getClickedChamado(chamado: ChamadoInterface): void {
+    console.log('chamado', chamado);
+  }
+
+  getClickedTableAnalyseData(tableData: any): void {
+    console.log('tableData', tableData);
+  }
 
 }

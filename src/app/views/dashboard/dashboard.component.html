@@ -15,12 +15,17 @@
 
     <div class="col-sm-4 table-and-tickets-box chamados-box">
       <p>Chamados</p>
-      <app-chamados></app-chamados>
+      <app-chamados (chamadoAction)="getClickedChamado($event)"></app-chamados>
     </div>
 
     <div class="col-sm table-and-tickets-box">
       <p>Lançamentos Agendados</p>
-      <app-dynamic-table [tableData]="tableData" [columnsToDisplay]="columnsToDisplay" [csvName]="'lançamentos-agendados'"></app-dynamic-table>
+      <app-dynamic-table
+        (analyseStatus)="getClickedTableAnalyseData($event)"
+        [tableData]="tableData"
+        [columnsToDisplay]="columnsToDisplay"
+        [csvName]="'lançamentos-agendados'">
+      </app-dynamic-table>
     </div>
 
   </div>

@@ -1,6 +1,5 @@
 <div class="row chamados-container">
   <div class="col-sm-12 chamados-box">
-
     <div *ngFor="let chamado of chamados" class="row d-flex justify-content-center align-items-center mb-4 chamado-row">
 
       <div class="col-sm-2">
@@ -18,10 +17,9 @@
       </div>
 
       <div class="col-sm">
-        <i class="bi bi-eye hvr-float"></i>
+        <i class="bi bi-eye hvr-float" (click)="chamadoAction.emit(chamado)"></i>
       </div>
 
     </div>
-
   </div>
 </div>
