@@ -16,12 +16,18 @@
         <div>
           <div>
             <p class="donut-chart-label">Recebido</p>
-            <p class="donut-chart-value"> <i class="bi bi-arrow-down"></i>R$ {{ fluxoCaixaDonutData.pagamentoRecebido | currency:'BRL':'symbol':'1.2-2' }}</p>
+            <p class="donut-chart-value">
+              <i class="bi bi-arrow-down"></i>
+              R$ {{ fluxoCaixaDonutData.pagamentoRecebido | currency:'BRL':'symbol':'1.2-2' }}
+            </p>
           </div>
 
           <div>
             <p class="donut-chart-label">Enviado</p>
-            <p class="donut-chart-value label-send"> <i class="bi bi-arrow-up"></i>R$ {{ fluxoCaixaDonutData.pagamentoEnviado | currency:'BRL':'symbol':'1.2-2' }}</p>
+            <p class="donut-chart-value label-send">
+              <i class="bi bi-arrow-up"></i>
+              R$ {{ fluxoCaixaDonutData.pagamentoEnviado | currency:'BRL':'symbol':'1.2-2' }}
+            </p>
           </div>
         </div>
       </div>

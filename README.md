@@ -10,6 +10,9 @@
 ## Project Url:
 [Fourbank](https://fourbank-poc.web.app)
 
+## Project Documentation
+[Fourbank Doc](https://github.com/jhonatan-costa-deliverit/fourbank-bootstrap-poc/blob/main/src/assets/docs/fourbank-poc-doc.pdf)
+
 ## Main technologies used in the project
 >* This project was generated with [Node.js](https://nodejs.org) version 22.14.0.
 >* This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 19.2.0.
