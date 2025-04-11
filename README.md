@@ -82,6 +82,6 @@
 > Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Preview app
-![image](https://github.com/jhonatan-costa-deliverit/fourbank-bootstrap-poc/blob/master/src/assets/previews/preview-one.png)
-![image](https://github.com/jhonatan-costa-deliverit/fourbank-bootstrap-poc/blob/master/src/assets/previews/preview-two.png)
-![image](https://github.com/jhonatan-costa-deliverit/fourbank-bootstrap-poc/blob/master/src/assets/previews/preview-three.png)
+![image](https://github.com/jhonatan-costa-deliverit/fourbank-bootstrap-poc/blob/main/src/assets/previews/preview-one.png)
+![image](https://github.com/jhonatan-costa-deliverit/fourbank-bootstrap-poc/blob/main/src/assets/previews/preview-two.png)
+![image](https://github.com/jhonatan-costa-deliverit/fourbank-bootstrap-poc/blob/main/src/assets/previews/preview-three.png)
