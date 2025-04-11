@@ -37,7 +37,7 @@ export class ChamadosComponent {
       foto: 'https://angular-material.fusetheme.com/images/avatars/male-02.jpg'
     },
     {
-      id: '1',
+      id: '4',
       nome: 'Heverton Andrade',
       descricao: 'Estou com problemas para ligar meu computador.',
       data: '10/04/2025',
@@ -45,20 +45,20 @@ export class ChamadosComponent {
       foto: 'https://angular-material.fusetheme.com/images/avatars/male-04.jpg'
     },
     {
-      id: '2',
+      id: '5',
       nome: 'jackeline Silva',
       descricao: 'Estou com problemas para ligar meu computador.',
       data: '9/04/2025',
       hora: '9:35',
-      foto: 'https://angular-material.fusetheme.com/images/avatars/male-04.jpg'
+      foto: 'https://angular-material.fusetheme.com/images/avatars/female-01.jpg'
     },
     {
-      id: '3',
+      id: '6',
       nome: 'Antonio Costa',
       descricao: 'Estou com problemas para ligar meu computador.',
       data: '7/04/2025',
       hora: '9:35',
-      foto: 'https://angular-material.fusetheme.com/images/avatars/male-04.jpg'
+      foto: 'https://angular-material.fusetheme.com/images/avatars/male-02.jpg'
     },
   ];
 
