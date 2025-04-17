@@ -11,8 +11,8 @@ import {NgIf} from '@angular/common';
   templateUrl: './donut.component.html'
 })
 export class DonutComponent implements OnInit {
-  showSpinner: boolean = true;
   @Input({required: true}) donutData: DonutDataInterface = {pagamentoEnviado: 0, pagamentoRecebido: 0};
+  showSpinner: boolean = true;
   public donutChartOptions!: ChartOptions<'doughnut'>;
   public donutChartData!: ChartConfiguration<'doughnut'>['data'];
 

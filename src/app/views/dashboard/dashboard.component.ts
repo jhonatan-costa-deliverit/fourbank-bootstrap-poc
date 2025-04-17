@@ -29,11 +29,11 @@ export class DashboardComponent {
   columnsToDisplay: string[] = ['data', 'conta', 'agencia', 'nome', 'valor', 'status'];
 
   getClickedChamado(chamado: ChamadoInterface): void {
-    console.log('chamado', chamado);
+    console.table(chamado);
   }
 
   getClickedTableAnalyseData(tableData: any): void {
-    console.log('tableData', tableData);
+    console.table('tableData', tableData);
   }
 
 }

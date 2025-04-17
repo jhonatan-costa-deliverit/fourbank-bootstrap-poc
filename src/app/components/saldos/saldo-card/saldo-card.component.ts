@@ -15,7 +15,7 @@ export class SaldoCardComponent {
   @Input({required: true}) menuActions: SaldoCardMenuInterface[] = [];
   @Input({required: true}) cardValue: number = 0;
 
-  constructor(private router: Router) {}
+  constructor(public router: Router) {}
 
   redirectToUrl(url: string): void {
     void this.router.navigate([url]);

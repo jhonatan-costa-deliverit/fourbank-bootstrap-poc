@@ -9,6 +9,7 @@ import {NgForOf} from '@angular/common';
   styleUrls: ['./chamados.component.scss', '../../shared/scss/hover-effects.scss']
 })
 export class ChamadosComponent {
+  @Output() public chamadoAction: EventEmitter<ChamadoInterface> = new EventEmitter<ChamadoInterface>();
   chamados: ChamadoInterface[] = [
     {
       id: '1',
@@ -59,5 +60,4 @@ export class ChamadosComponent {
       foto: 'https://angular-material.fusetheme.com/images/avatars/male-02.jpg'
     },
   ];
-  @Output() chamadoAction: EventEmitter<ChamadoInterface> = new EventEmitter();
 }

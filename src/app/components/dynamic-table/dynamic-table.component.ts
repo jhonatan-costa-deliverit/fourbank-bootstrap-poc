@@ -10,7 +10,7 @@ import {StatusColorPipe} from '../../pipes/status-color.pipe';
   styleUrls: ['./dynamic-table.component.scss', '../../shared/scss/hover-effects.scss']
 })
 export class DynamicTableComponent implements OnInit {
-  @Output() analyseStatus: EventEmitter<any> = new EventEmitter();
+  @Output() analyseStatus: EventEmitter<any> = new EventEmitter<any>();
   @Input({required: true}) tableData: any[] = [];
   @Input({required: true}) columnsToDisplay: string[] = [];
   @Input() csvName: string = 'tabela-completa';

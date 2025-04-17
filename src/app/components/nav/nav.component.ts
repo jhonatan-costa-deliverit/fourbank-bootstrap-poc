@@ -11,7 +11,7 @@ import {MenuItemsComponent} from './menu-items/menu-items.component';
 export class NavComponent {
 
   logout(): void {
-    console.log('logout');
+    console.warn('logout');
   }
 
 }
